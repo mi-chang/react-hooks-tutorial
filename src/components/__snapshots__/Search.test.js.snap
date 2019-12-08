@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search calls search 1`] = `undefined`;
+
+exports[`Search calls search 2`] = `undefined`;
+
+exports[`Search calls search 3`] = `undefined`;
+
+exports[`Search handles SearchInputChanges 1`] = `undefined`;
+
+exports[`Search handles SearchInputChanges 2`] = `undefined`;

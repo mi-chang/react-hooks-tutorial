@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Movie has an image 1`] = `
+<div>
+  <div
+    class="movie"
+  >
+    <h2>
+      An Image Title
+    </h2>
+    <div>
+      <img
+        alt="The movie titled: An Image Title"
+        src="https://some.com/uri/to/poster/image"
+        width="200"
+      />
+    </div>
+    <p>
+      (
+      2222
+      )
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Movie has default image 1`] = `
+<div>
+  <div
+    class="movie"
+  >
+    <h2>
+      Default Image Title
+    </h2>
+    <div>
+      <img
+        alt="The movie titled: Default Image Title"
+        src="https://m.media-amazon.com/images/M/MV5BMTczNTI2ODUwOF5BMl5BanBnXkFtZTcwMTU0NTIzMw@@._V1_SX300.jpg"
+        width="200"
+      />
+    </div>
+    <p>
+      (
+      1111
+      )
+    </p>
+  </div>
+</div>
+`;

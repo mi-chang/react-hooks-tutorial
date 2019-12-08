@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header has text 1`] = `
+<div>
+  <header
+    class="App-header"
+  >
+    <h2>
+      header text
+    </h2>
+  </header>
+</div>
+`;
