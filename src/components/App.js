@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useReducer, useEffect } from 'react';
 import '../App.css';
 import Header from './Header';
 import Movie from './Movie';
@@ -6,36 +6,74 @@ import Search from './Search';
 
 const API_KEY = process.env.REACT_APP_API_KEY;
 
-function App() {
-  const [loading, setLoading] = useState(true)
-  const [movies, setMovies] = useState([]);
-  const [errorMessage, setErrorMessage] = useState(null);
+const initialState = {
+  loading: true,
+  movies: [],
+  errorMessage: null
+};
+
+const reducer = (state, action) => {
+  switch (action.type) {
+    case 'SEARCH_MOVIE_REQUEST':
+      return {
+        ...state,
+        loading: true,
+        errorMessage: null
+      };
+    case 'SEARCH_MOVIE_SUCCESS':
+      return {
+        ...state,
+        loading: false,
+        movies: action.payload
+      };
+    case 'SEARCH_MOVIE_FAILURE':
+      return {
+        ...state,
+        loading: false,
+        errorMessage: action.error
+      };
+    default:
+      return state;
+  }
+};
+
+const App = () => {
+  const [state, dispatch] = useReducer(reducer, initialState);
 
   useEffect(() => {
     fetch(`https://www.omdbapi.com/?s=man&apikey=${API_KEY}`)
     .then(res => res.json())
     .then(json => {
-      setMovies(json.Search);
-      setLoading(false);
-    })
+      dispatch({
+        type: 'SEARCH_MOVIE_SUCCESS',
+        payload: json.Search
+      });
+    });
   }, []);
 
   const search = searchValue => {
-    setLoading(true)
-    setErrorMessage(null);
+    dispatch({
+      type: 'SEARCH_MOVIE_REQUEST'
+    });
 
     fetch(`https://www.omdbapi.com/?s=${searchValue}&apikey=${API_KEY}`)
     .then(res => res.json())
     .then(json => {
       if (json.Response === 'True') {
-        setMovies(json.Search);
-        setLoading(false);
+        dispatch({
+          type: 'SEARCH_MOVIE_SUCCESS',
+          payload: json.Search
+        });
       } else {
-        setErrorMessage(json.Error);
-        setLoading(false);
+        dispatch({
+          type: 'SEARCH_MOVIE_FAILURE',
+          error: json.Error
+        })
       }
     });
   };
+
+  const { movies, errorMessage, loading } = state;
 
   return (
     <div className="App">
@@ -55,6 +93,6 @@ function App() {
       </div>
     </div>
   );
-}
+};
 
 export default App;
