@@ -1,0 +1,219 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App searches "man" at first 1`] = `
+<div>
+  <div
+    class="App"
+  >
+    <header
+      class="App-header"
+    >
+      <h2>
+        HOOKED
+      </h2>
+    </header>
+    <form
+      class="search"
+    >
+      <label
+        for="searchText"
+      >
+        Title
+      </label>
+      <input
+        id="searchText"
+        type="text"
+        value=""
+      />
+      <input
+        type="submit"
+        value="SEARCH"
+      />
+    </form>
+    <p
+      class="App-intro"
+    >
+      Sharing a few our favourite movies
+    </p>
+    <div
+      class="movies"
+    >
+      <div
+        class="movie"
+      >
+        <h2>
+          man
+        </h2>
+        <div>
+          <img
+            alt="The movie titled: man"
+            src="http://some.com/image/man"
+            width="200"
+          />
+        </div>
+        <p>
+          (
+          1111
+          )
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`App searches "woman" 1`] = `
+<div>
+  <div
+    class="App"
+  >
+    <header
+      class="App-header"
+    >
+      <h2>
+        HOOKED
+      </h2>
+    </header>
+    <form
+      class="search"
+    >
+      <label
+        for="searchText"
+      >
+        Title
+      </label>
+      <input
+        id="searchText"
+        type="text"
+        value=""
+      />
+      <input
+        type="submit"
+        value="SEARCH"
+      />
+    </form>
+    <p
+      class="App-intro"
+    >
+      Sharing a few our favourite movies
+    </p>
+    <div
+      class="movies"
+    >
+      <div
+        class="movie"
+      >
+        <h2>
+          woman
+        </h2>
+        <div>
+          <img
+            alt="The movie titled: woman"
+            src="http://some.com/image/woman"
+            width="200"
+          />
+        </div>
+        <p>
+          (
+          2222
+          )
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`App shows error message 1`] = `
+<div>
+  <div
+    class="App"
+  >
+    <header
+      class="App-header"
+    >
+      <h2>
+        HOOKED
+      </h2>
+    </header>
+    <form
+      class="search"
+    >
+      <label
+        for="searchText"
+      >
+        Title
+      </label>
+      <input
+        id="searchText"
+        type="text"
+        value=""
+      />
+      <input
+        type="submit"
+        value="SEARCH"
+      />
+    </form>
+    <p
+      class="App-intro"
+    >
+      Sharing a few our favourite movies
+    </p>
+    <div
+      class="movies"
+    >
+      <div
+        class="errorMessage"
+      >
+        Somethig bad!
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`App shows loading before request 1`] = `
+<div>
+  <div
+    class="App"
+  >
+    <header
+      class="App-header"
+    >
+      <h2>
+        HOOKED
+      </h2>
+    </header>
+    <form
+      class="search"
+    >
+      <label
+        for="searchText"
+      >
+        Title
+      </label>
+      <input
+        id="searchText"
+        type="text"
+        value=""
+      />
+      <input
+        type="submit"
+        value="SEARCH"
+      />
+    </form>
+    <p
+      class="App-intro"
+    >
+      Sharing a few our favourite movies
+    </p>
+    <div
+      class="movies"
+    >
+      <span>
+        loading...
+      </span>
+    </div>
+  </div>
+</div>
+`;
